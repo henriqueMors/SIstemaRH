@@ -11,6 +11,7 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 
+@SuppressWarnings("unused")
 @Configuration
 public class dataConfiguration {
     
