@@ -18,7 +18,6 @@ public class dataConfiguration {
     @Bean
     public DataSource dataSource() {
         
-        //verificar a criacao real de um db no linux
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/apprh?useTimezone=true&serverTimezone=UTC");
