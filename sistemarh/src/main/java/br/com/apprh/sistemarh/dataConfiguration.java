@@ -2,14 +2,12 @@ package br.com.apprh.sistemarh;
 
 import javax.sql.DataSource;
 
-import org.aspectj.internal.lang.annotation.ajcDeclareParents;
-import org.hibernate.Hibernate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.orm.jpa.JpaVendorAdapter;
 
 
 @Configuration
@@ -36,6 +34,7 @@ public class dataConfiguration {
         adapter.setDatabasePlatform("org.hibernate.dialect.MariaDBDialect");
         adapter.setPrepareConnection(true);
         return adapter;
+        
     }
 }
 
