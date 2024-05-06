@@ -7,8 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.oneToMany;
-
+import javax.persistence.OneToMany;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -33,8 +32,6 @@ public class Vaga implements Serializable {
 
     @NotEmpty
     private String salario;
-
-    
 
 
 
