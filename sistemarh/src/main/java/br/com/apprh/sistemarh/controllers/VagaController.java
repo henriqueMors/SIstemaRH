@@ -12,11 +12,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.apprh.sistemarh.models.Candidato;
 import br.com.apprh.sistemarh.models.Vaga;
-import br.com.apprh.sistemarh.repository;
+import br.com.apprh.sistemarh.repository.CandidatoRepository;
+import br.com.apprh.sistemarh.repository.VagaRepository;
+
 
 @Controller
 public class VagaController {
     
     private VagaRepository vr;
     private CandidatoRepository cr;
+    
 }
