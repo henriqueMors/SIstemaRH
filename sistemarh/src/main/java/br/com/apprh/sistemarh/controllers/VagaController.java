@@ -16,5 +16,6 @@ import br.com.apprh.sistemarh.models.Vaga;
 @Controller
 public class VagaController {
     
-    
+    private VagaRepository vr;
+    private CandidatoRepository cr;
 }
