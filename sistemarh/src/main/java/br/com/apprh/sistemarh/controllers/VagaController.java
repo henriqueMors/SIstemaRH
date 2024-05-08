@@ -21,5 +21,10 @@ public class VagaController {
     
     private VagaRepository vr;
     private CandidatoRepository cr;
-    
+
+    @RequestMapping(value = "/cadastrarVaga", method = RequestMethod.GET)
+    public String form() {
+        return "vaga/formVaga";
+    }
+
 }
