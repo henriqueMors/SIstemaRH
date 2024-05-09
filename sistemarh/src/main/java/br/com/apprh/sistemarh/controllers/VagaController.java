@@ -27,4 +27,12 @@ public class VagaController {
         return "vaga/formVaga";
     }
 
+    @RequestMapping(value = "/cadastrarVaga", method = RequestMethod.POST)
+    public String form(@Valid Vaga vaga, BindingResult result, RedirectAttributes attributes) {
+        
+        
+        
+        return "";
+    }
+
 }
