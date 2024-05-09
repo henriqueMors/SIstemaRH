@@ -30,9 +30,14 @@ public class VagaController {
     @RequestMapping(value = "/cadastrarVaga", method = RequestMethod.POST)
     public String form(@Valid Vaga vaga, BindingResult result, RedirectAttributes attributes) {
         
-        
-        
-        return "";
+        if (result.hasErrors()) {
+            attributes.addFlashAttribute("mensagem", "Verifique os campos...");
+            return "redirect:/cadastrarVaga";
+        }
+
+        vr.save(vaga);
+        attributes.addFlashAttribute("mensagem", "Vaga cadastrada com sucesso!");
+        return "redirect:/cadastrarVaga";
     }
 
 }
