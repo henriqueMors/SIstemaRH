@@ -3,6 +3,7 @@ package br.com.apprh.sistemarh.models;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,13 +17,15 @@ public class Vaga implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
 
     @NotEmpty
+    @Column(length = 100)
     private String nome;
 
     @NotEmpty
+    @Column(length = 255)
     private String descricao;
 
     @NotEmpty
