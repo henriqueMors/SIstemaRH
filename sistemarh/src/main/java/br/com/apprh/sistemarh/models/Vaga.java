@@ -21,7 +21,7 @@ public class Vaga implements Serializable {
     private long codigo;
 
     @NotEmpty
-    @Column(length = 100)
+    @Column(name = "nome")
     private String nome;
 
     @NotEmpty
