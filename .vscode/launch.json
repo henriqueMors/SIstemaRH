@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SistemarhApplication",
+            "request": "launch",
+            "mainClass": "SistemarhApplication",
+            "projectName": "sistemarh"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-SistemarhApplication<sistemarh>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
