@@ -18,7 +18,7 @@ public class Vaga implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long codigo;
+    private long id;
 
     @NotEmpty
     @Column(name = "nome")
@@ -37,12 +37,12 @@ public class Vaga implements Serializable {
     @OneToMany (mappedBy = "vaga", cascade = CascadeType.REMOVE)
     private List<Candidato> candidatos;
 
-    public long getCodigo() {
-        return codigo;
+    public long get() {
+        return id;
     }
 
-    public void setCodigo(long codigo) {
-        this.codigo = codigo;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNome() {
