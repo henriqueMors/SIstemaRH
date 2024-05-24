@@ -2,13 +2,7 @@ package br.com.apprh.sistemarh.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
@@ -34,10 +28,12 @@ public class Vaga implements Serializable {
     @NotEmpty
     private String salario;
 
-    @OneToMany (mappedBy = "vaga", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "vaga", cascade = CascadeType.REMOVE)
     private List<Candidato> candidatos;
 
-    public long get() {
+    // Getters and Setters
+
+    public long getId() {
         return id;
     }
 
@@ -84,7 +80,4 @@ public class Vaga implements Serializable {
     public void setCandidatos(List<Candidato> candidatos) {
         this.candidatos = candidatos;
     }
-
-    
-
 }

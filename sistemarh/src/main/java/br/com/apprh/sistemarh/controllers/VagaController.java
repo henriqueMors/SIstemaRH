@@ -15,12 +15,14 @@ import br.com.apprh.sistemarh.models.Vaga;
 import br.com.apprh.sistemarh.repository.CandidatoRepository;
 import br.com.apprh.sistemarh.repository.VagaRepository;
 
-
 @Controller
 public class VagaController {
     
-    private VagaRepository vr;
-    private CandidatoRepository cr;
+    @Autowired
+    private VagaRepository vagaRepository;
+    
+    @Autowired
+    private CandidatoRepository candidatoRepository;
 
     @RequestMapping(value = "/cadastrarVaga", method = RequestMethod.GET)
     public String form() {
@@ -35,9 +37,8 @@ public class VagaController {
             return "redirect:/cadastrarVaga";
         }
 
-        vr.save(vaga);
+        vagaRepository.save(vaga);
         attributes.addFlashAttribute("mensagem", "Vaga cadastrada com sucesso!");
         return "redirect:/cadastrarVaga";
     }
-
 }

@@ -1,18 +1,13 @@
 package br.com.apprh.sistemarh.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Candidato {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(unique = true)
@@ -26,6 +21,16 @@ public class Candidato {
 
     @ManyToOne
     private Vaga vaga;
+
+    // Getters and Setters
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getRg() {
         return rg;
@@ -58,6 +63,4 @@ public class Candidato {
     public void setVaga(Vaga vaga) {
         this.vaga = vaga;
     }
-
-    
 }
