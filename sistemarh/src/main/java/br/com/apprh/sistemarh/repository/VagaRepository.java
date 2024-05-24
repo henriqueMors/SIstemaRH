@@ -9,7 +9,7 @@ import br.com.apprh.sistemarh.models.Vaga;
 
 import br.com.apprh.sistemarh.models.Vaga;
 
-public interface VagaRepository extends CrudRepository<Vaga, String> {
+public interface VagaRepository extends JpaRepository<Vaga, Long> {
 
     Vaga findByCodigo(long id);
     List<Vaga> findByNome(String nome);
